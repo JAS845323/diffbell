@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>DiffBell — Simple, Unlimited Local Webpage Change Alerts for Chrome</title>
+    <meta
+      name="description"
+      content="Track changes on any part of a webpage locally in Chrome (Manifest V3). Unlimited local monitors, no account required, and optional phone alerts."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-inner">
+        <a href="./index.html" class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3v18" />
+              <path d="M5 8h4" />
+              <path d="M5 12h4" />
+              <path d="M5 16h3" />
+              <path d="M15 8h4" />
+              <path d="M15 12h4" />
+              <path d="M16 16h3" />
+            </svg>
+          </span>
+          <span>DiffBell</span>
+        </a>
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="#why">Why Local</a>
+          <a href="#pricing">Free vs Pro</a>
+          <a href="#faq-heading">FAQ</a>
+          <a href="./privacy.html">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="waitlist" class="hero">
+        <div class="container">
+          <span class="eyebrow">Chrome &amp; Chromium Manifest V3 · Local-First · Early Access Waitlist</span>
+          <h1>Simple, unlimited webpage change alerts — right inside your browser.</h1>
+          <p class="hero-sub">
+            Built for former Page Monitor users and anyone tired of cloud check caps or complex rules.
+            Click any section of a webpage, pick your check interval, and keep every URL and snapshot
+            strictly on your own computer.
+          </p>
+
+          <div class="hero-grid">
+            <div class="waitlist-box">
+              <h2>Join the launch waitlist</h2>
+              <p class="waitlist-lead">
+                Free core version is unlimited for local checks. Waitlist members also get the
+                <strong>$12 early-bird</strong> Pro link (regularly $19 one-time) when beta opens.
+              </p>
+
+              <!-- =======================================================================
+                   TALLY EMBED (DiffBell Beta Waitlist · Form ID: Gel6jz)
+                   ======================================================================= -->
+              <div id="tally-placeholder" class="tally-placeholder" role="region" aria-label="Tally waitlist form placeholder" hidden>
+                <p class="placeholder-badge">Tally Embed Placeholder</p>
+                <p class="placeholder-note">
+                  Paste your Tally form ID into <code>index.html</code> (or <code>main.js</code>) to
+                  activate live email sign-ups. See <code>TALLY_SETUP.md</code> for the 3-minute setup.
+                </p>
+                <div class="placeholder-preview" aria-hidden="true">
+                  <span class="fake-input">you@example.com</span>
+                  <span class="btn btn-primary">Notify Me at Launch</span>
+                </div>
+              </div>
+
+              <iframe
+                id="tally-waitlist-iframe"
+                data-tally-src="https://tally.so/embed/Gel6jz?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy"
+                width="100%"
+                height="380"
+                frameborder="0"
+                marginheight="0"
+                marginwidth="0"
+                title="DiffBell Launch Waitlist Form"
+              ></iframe>
+
+              <p class="privacy-micro">
+                <strong>Privacy promise:</strong> Your email is used strictly to notify you when
+                DiffBell launches (and send your early-bird link). Never sold or shared with
+                third parties. <a href="./privacy.html">Read Privacy Policy</a>
+              </p>
+            </div>
+
+            <aside class="concept-card" aria-label="Concept preview of local webpage diff">
+              <div class="concept-head">
+                <span class="concept-title">Concept Preview · Local Check</span>
+                <span class="concept-badge">0 bytes sent to cloud</span>
+              </div>
+              <div class="concept-body">
+                <div class="concept-row">
+                  <span class="concept-label">Target Selector</span>
+                  <code>#product-availability &gt; .status-pill</code>
+                </div>
+                <div class="concept-row">
+                  <span class="concept-label">Schedule</span>
+                  <span>Every 5 minutes · Local MV3 Alarm</span>
+                </div>
+                <div class="diff-preview">
+                  <div class="diff-line diff-del">- Out of stock — Check back later</div>
+                  <div class="diff-line diff-add">+ In stock — Ships within 24 hours</div>
+                </div>
+                <p class="concept-foot">
+                  Desktop alert fires locally. Optional Pro alerts push straight from your browser to
+                  Telegram, Discord, or ntfy.
+                </p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section section-alt">
+        <div class="container">
+          <h2>Why Another Webpage Change Tracker?</h2>
+          <p class="section-lead">
+            Since Chrome removed WebSQL and older local monitors stopped working, most options became
+            either expensive cloud SaaS tools with tight check limits or overly complex dashboards.
+          </p>
+
+          <div class="card-grid">
+            <article class="feature-card">
+              <span class="card-num">1</span>
+              <h3>As simple as it used to be</h3>
+              <p>
+                Open any page, click the element you care about, and set an interval. No XPath
+                tutorials, no multi-screen onboarding, and no cluttered dashboard to learn.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="card-num">2</span>
+              <h3>Unlimited local checks, fewer false alarms</h3>
+              <p>
+                Checks run natively inside Chrome Manifest V3 on your own schedule. Target specific DOM
+                regions and trim whitespace or dynamic noise so layout tweaks don't spam you.
+              </p>
+            </article>
+            <article class="feature-card">
+              <span class="card-num">3</span>
+              <h3>No account — data stays on your computer</h3>
+              <p>
+                Zero sign-ups required to monitor pages. Your URLs, selectors, and page snapshots live
+                exclusively in local browser storage and never touch third-party scraping servers.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="section">
+        <div class="container">
+          <h2>Free Core Forever. One-Time Pro Upgrade.</h2>
+          <p class="section-lead">
+            Keep unlimited local webpage monitoring free. Pay once only if you want phone push
+            integrations, keyword/price rules, and diff exports.
+          </p>
+
+          <div tabindex="0" role="region" aria-labelledby="compare-caption" class="table-wrap">
+            <table class="compare-table">
+              <caption id="compare-caption" class="sr-only">
+                Comparison of Free Local Plan and Pro One-Time Plan features
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">Feature</th>
+                  <th scope="col">Free (Local Core)</th>
+                  <th scope="col" class="col-highlight">Pro ($19 once · $12 Early Bird)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Local webpage monitors</th>
+                  <td>Unlimited</td>
+                  <td class="col-highlight"><strong>Unlimited</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Visual region &amp; element picker</th>
+                  <td>Included</td>
+                  <td class="col-highlight"><strong>Included</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Custom check intervals</th>
+                  <td>Included (down to 1 min)</td>
+                  <td class="col-highlight"><strong>Included (down to 1 min)</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Native desktop notifications</th>
+                  <td>Included</td>
+                  <td class="col-highlight"><strong>Included</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Account required / Cloud upload</th>
+                  <td>None — 100% local</td>
+                  <td class="col-highlight"><strong>None — 100% local</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Phone alerts (Telegram / Discord / ntfy)</th>
+                  <td>—</td>
+                  <td class="col-highlight"><strong>Direct from extension (zero backend)</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Keyword &amp; price-threshold triggers</th>
+                  <td>—</td>
+                  <td class="col-highlight"><strong>Notify only when condition matches</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Change history &amp; CSV / JSON export</th>
+                  <td>—</td>
+                  <td class="col-highlight"><strong>Full diff log + 1-click export</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">Price</th>
+                  <td>$0 forever</td>
+                  <td class="col-highlight"><strong>$19 one-time ($12 Waitlist Early Bird)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="price-card">
+              <span class="pill">Free Forever</span>
+              <h3>Local Core</h3>
+              <p class="price">$0 <span class="price-note">No account needed</span></p>
+              <ul>
+                <li>Unlimited local page monitors in Chrome</li>
+                <li>Click-to-select page region picker</li>
+                <li>Custom check intervals &amp; noise trimming</li>
+                <li>Native browser desktop alerts</li>
+              </ul>
+              <a href="#waitlist" class="btn btn-secondary btn-full">Join Free Beta Waitlist</a>
+            </article>
+
+            <article class="price-card featured">
+              <span class="pill">Waitlist Early Bird · Save $7</span>
+              <h3>Pro Lifetime</h3>
+              <p class="price">
+                $12 <span class="price-note">early bird · $19 standard one-time</span>
+              </p>
+              <ul>
+                <li>Everything in Free Local Core</li>
+                <li>Phone notifications via Telegram, Discord, or ntfy (sent straight from your browser)</li>
+                <li>Keyword contain/exclude &amp; numeric price-drop thresholds</li>
+                <li>Saved diff timeline with CSV &amp; JSON export</li>
+                <li>Zero recurring subscription — Polar.sh license key</li>
+              </ul>
+              <a href="#waitlist" class="btn btn-primary btn-full">Reserve $12 Early Bird Spot</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-alt">
+        <div class="container narrow">
+          <section class="accordion" id="faq-accordion" aria-labelledby="faq-heading">
+            <div class="faq-header">
+              <h2 id="faq-heading">Frequently Asked Questions</h2>
+              <button
+                type="button"
+                class="btn btn-secondary btn-sm"
+                commandfor="faq-accordion"
+                command="--toggle-all"
+                aria-expanded="false"
+              >
+                <span class="expand">Expand all</span>
+                <span class="collapse">Collapse all</span>
+              </button>
+            </div>
+
+            <details>
+              <summary>How is this related to Page Monitor?</summary>
+              <div class="faq-body">
+                <p>
+                  DiffBell is an <strong>independent, unofficial product</strong> built from
+                  scratch for Chrome Manifest V3. It is not affiliated with, sponsored by, or
+                  endorsed by Page Monitor, Visualping, or Distill. We built it for former Page
+                  Monitor users looking for a simple, local-first monitor after Chrome retired
+                  WebSQL.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Where is my monitoring data stored?</summary>
+              <div class="faq-body">
+                <p>
+                  All monitored URLs, selected page regions, check intervals, and change snapshots
+                  are stored 100% locally in your browser (using Chrome's local extension storage and
+                  IndexedDB). Nothing is uploaded to our servers. When you enable optional Pro phone
+                  notifications, your browser sends the alert directly to the Telegram, Discord, or
+                  ntfy webhook you configure — with zero middleman backend.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>When will it launch?</summary>
+              <div class="faq-body">
+                <p>
+                  We are currently validating early demand and prioritizing Pro features based on
+                  waitlist feedback. Waitlist subscribers will be invited to the first Chrome Web
+                  Store beta release and receive the $12 early-bird one-time link before public
+                  launch.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Does Chrome need to stay open for checks to run?</summary>
+              <div class="faq-body">
+                <p>
+                  Yes. Because checks run locally inside Chrome (using Manifest V3 alarms) without a
+                  cloud server scraping sites on your behalf, your browser needs to be open on your
+                  computer. That local architecture is what lets us offer unlimited monitors for
+                  free with complete privacy.
+                </p>
+              </div>
+            </details>
+
+            <details>
+              <summary>Is Pro a monthly subscription?</summary>
+              <div class="faq-body">
+                <p>
+                  No. Pro is a <strong>$19 one-time purchase</strong> ($12 early bird for waitlist
+                  sign-ups), activated with a Polar.sh license key. No recurring monthly charges.
+                </p>
+              </div>
+            </details>
+          </section>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container narrow">
+          <div class="privacy-banner">
+            <h2>Straightforward Email Privacy</h2>
+            <p>
+              We collect your email address on this page solely to send a one-time launch notice
+              (and your $12 early-bird discount link). We do not send unrelated newsletters, do not
+              run third-party ad trackers, and never sell or share your email with anyone.
+              <a href="./privacy.html">View full Privacy Policy</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>DiffBell · Local-First Webpage Change Tracker (Pre-Launch)</p>
+        <p>
+          <a href="./privacy.html">Privacy Policy</a> ·
+          <a href="#waitlist">Join Waitlist</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="./main.js"></script>
+    <script src="https://tally.so/widgets/embed.js" async></script>
+  </body>
+</html>
